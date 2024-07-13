@@ -1,0 +1,560 @@
+/* slidy.css
+
+   Copyright (c) 2005-2010 W3C (MIT, ERCIM, Keio), All Rights Reserved.
+   W3C liability, trademark, document use and software licensing
+   rules apply, see:
+
+   http://www.w3.org/Consortium/Legal/copyright-documents
+   http://www.w3.org/Consortium/Legal/copyright-software
+*/
+body
+{
+  background-color: white;
+  color: black;
+  font-family: "Xfinity Brown", "Arial", sans-serif;
+  font-size: 14pt;
+  height: 100%;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  width: 100%;
+}
+
+div.toolbar {
+  background-color: rgb(240,240,240);
+  border-top: solid 1px rgb(180,180,180);
+  bottom: 0;
+  color: red;
+  font-size: 60%;
+  height: 1.2em;
+  left: 0;
+  padding-left: 1em;
+  padding-right: 1em; 
+  position: fixed;
+  right: 0;
+  text-align: right;
+  top: auto;
+  z-index: 200;
+}
+
+div.toolbar span.copyright {
+  color: black;
+  margin-left: 0.5em;
+}
+
+div.initial_prompt {
+  background-color: rgb(200,200,200);
+  background-color: rgba(200,200,200, 0.35);
+  bottom: 1.2em;
+  cursor: pointer;
+  opacity: 0.35;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+}
+
+div.initial_prompt .help {
+  text-align: center;
+}
+
+div.initial_prompt .close {
+  font-style: italic;
+  text-align: right;
+}
+
+div.slidy_toc {
+  background: rgb(240,240,240);
+  border-style: solid;
+  border-width: 2px;
+  bottom: 4em;
+  font-size: 60%;
+  height: 30em;
+  left: 4em;
+  max-width: 30em;
+  overflow: auto;
+  padding: 1em;
+  position: absolute;
+  right: auto;
+  top: auto;
+  width: 60%;
+  z-index: 300;
+}
+
+div.slidy_toc .toc_heading {
+  border-bottom-color: rgb(180,180,180);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  margin: 0;
+  margin-bottom: 1em;
+  text-align: center;
+  width: 100%;
+}
+
+div.slide {
+  background-color: transparent;
+  border-width: 0;
+  bottom: 0;
+  clear: both;
+  left: 0;
+  line-height: 120%;
+  margin: 0 0 0 0;
+  padding: 0 20px 0 20px;
+  right: 0;
+  top: 0;
+  z-index: 20;
+}
+
+div.background {
+  display: none;
+}
+
+div.handout {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+div.slide.titlepage {
+  text-align: center;
+}
+
+div.slide.titlepage h1 {
+  padding-top: 10%;
+  margin-right: 0;
+}
+
+div.slide h1 {
+  background: transparent;
+  display: block; 
+  font-size: 160%;
+  line-height: 1.2em;
+  margin: 0 60pt 0.5em 0;
+  padding: 4pt 20pt 4pt 0;
+}
+
+@media screen and (max-device-width: 1024px) {
+  div.slide { font-size: 100%; }
+}
+
+@media screen and (max-device-width: 800px) {
+  div.slide {
+    font-size: 200%;
+  }
+
+  div.slidy_toc {
+    font-size: 180%;
+    left: 1em;
+    right: auto;
+    top: 1em;
+    width: 80%;
+  }
+}
+
+.toc-heading {
+  border-bottom: solid 1px rgb(180,180,180);
+  margin-bottom: 1em;
+  text-align: center;
+  width: 100%;
+}
+
+img {
+  background-color: transparent;
+  image-rendering: optimizeQuality;
+}
+
+pre {
+ background-color: #E4E5E7;
+ border-color: #95ABD0;
+ border-style: solid;
+ border-width: thin thin thin 1em;
+ color: #00428C;
+ font-size: 80%;
+ font-weight: bold;
+ line-height: 120%;
+ padding: 0.2em 1em 0.2em 1em;
+}
+
+li pre {
+  margin-left: 0;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+p.copyright {
+  font-size: smaller;
+}
+
+.center {
+  text-align: center;
+}
+
+.footnote {
+  font-size: smaller;
+  margin-left: 2em;
+}
+
+a img {
+  border-style: none;
+  border-width: 0;
+}
+
+a:visited {
+  color: navy;
+}
+a:link {
+  color: navy;
+}
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+a:active {
+  color: red;
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+}
+.toolbar a:link {
+  color: blue;
+}
+.toolbar a:visited {
+  color: blue;
+}
+.toolbar a:active {
+  color: red;
+}
+.toolbar a:hover {
+  color: red;
+}
+
+ul {
+  list-style-type: square;
+}
+ul ul {
+  list-style-type: disc;
+}
+ul ul ul {
+  list-style-type: circle;
+}
+ul ul ul ul {
+  list-style-type: disc;
+}
+li {
+  margin-left: 0.5em;
+  margin-top: 0.5em; 
+}
+li li {
+  font-size: 85%;
+  font-style: italic;
+}
+li li li {
+  font-size: 85%;
+  font-style: normal;
+}
+
+div dt
+{
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  margin-left: 0;
+  margin-top: 1em;
+}
+div dd
+{
+  margin-bottom: 0.5em;
+  margin-left: 2em;
+}
+
+
+p,pre,ul,ol,blockquote,h2,h3,h4,h5,h6,dl,table {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.subhead {
+  font-weight: bold;
+  margin-top: 2em;
+}
+
+.smaller {
+  font-size: smaller;
+}
+.bigger {
+  font-size: 130%;
+}
+
+td,th {
+  padding: 0.2em;
+}
+
+ul {
+  margin: 0.5em 1.5em 0.5em 1.5em;
+  padding: 0;
+}
+
+ol {
+  margin: 0.5em 1.5em 0.5em 1.5em;
+  padding: 0;
+}
+
+ul li {
+  line-height: 140%;
+  list-style: square;
+  margin: 0.1em 0 0.6em 0;
+  padding: 0 0 0 0;
+}
+
+ol li { 
+  line-height: 140%;
+  list-style-type: decimal;
+  margin: 0.1em 0 0.6em 1.5em;
+  padding: 0 0 0 0;
+}
+
+li ul li { 
+  background: transparent;
+  font-size: 85%; 
+  font-style: italic;
+  list-style-type: disc;
+  padding: 0 0 0 0;
+}
+li li ul li { 
+  background: transparent;
+  font-size: 85%; 
+  font-style: normal;
+  list-style-type: circle;
+  padding: 0 0 0 0;
+}
+li li li ul li {
+  background: transparent;
+  list-style-type: disc;
+  padding: 0 0 0 0;
+}
+
+li ol li {
+  list-style-type: decimal;
+}
+
+
+li li ol li {
+  list-style-type: decimal;
+}
+
+/*
+ setting class="outline on ol or ul makes it behave as an
+ ouline list where blocklevel content in li elements is
+ hidden by default and can be expanded or collapsed with
+ mouse click. Set class="expand" on li to override default
+*/
+
+ol.outline li:hover {
+  cursor: pointer;
+}
+ol.outline li.nofold:hover {
+  cursor: default;
+}
+
+ul.outline li:hover {
+  cursor: pointer;
+}
+ul.outline li.nofold:hover {
+  cursor: default;
+}
+
+ol.outline {
+  list-style:decimal;
+}
+ol.outline ol {
+  list-style-type:lower-alpha;
+}
+
+ol.outline li.nofold {
+  background: transparent url(../graphics/nofold-dim.gif) no-repeat 0 0.5em;
+  padding: 0 0 0 20px;
+}
+ol.outline li.unfolded {
+  background: transparent url(../graphics/fold-dim.gif) no-repeat 0 0.5em;
+  padding: 0 0 0 20px;
+}
+ol.outline li.folded {
+  background: transparent url(../graphics/unfold-dim.gif) no-repeat 0 0.5em;
+  padding: 0 0 0 20px;
+}
+ol.outline li.unfolded:hover {
+  background: transparent url(../graphics/fold.gif) no-repeat 0 0.5em;
+  padding: 0 0 0 20px;
+}
+ol.outline li.folded:hover {
+  background: transparent url(../graphics/unfold.gif) no-repeat 0 0.5em;
+  padding: 0 0 0 20px;
+}
+
+ul.outline li.nofold {
+  background: transparent url(../graphics/nofold-dim.gif) no-repeat 0 0.5em;
+  padding: 0 0 0 20px;
+}
+ul.outline li.unfolded {
+  background: transparent url(../graphics/fold-dim.gif) no-repeat 0 0.5em;
+  padding: 0 0 0 20px;
+}
+ul.outline li.folded {
+  background: transparent url(../graphics/unfold-dim.gif) no-repeat 0 0.5em;
+  padding: 0 0 0 20px;
+}
+ul.outline li.unfolded:hover {
+  background: transparent url(../graphics/fold.gif) no-repeat 0 0.5em;
+  padding: 0 0 0 20px;
+}
+ul.outline li.folded:hover {
+  background: transparent url(../graphics/unfold.gif) no-repeat 0 0.5em;
+  padding: 0 0 0 20px;
+}
+
+/* for slides with class "title" in table of contents */
+a.titleslide {
+  font-weight: bold;
+  font-style: italic
+}
+
+/*
+ hide images for work around for save as bug
+ where browsers fail to save images used by CSS
+*/
+img.hidden {
+  display: none;
+  visibility: hidden;
+}
+div.initial_prompt {
+  display: none;
+  visibility: hidden;
+}
+
+div.slide {
+   visibility: visible;
+   position: inherit;
+}
+div.handout {
+   border-top-style: solid;
+   border-top-width: thin;
+   border-top-color: black;
+}
+
+@media screen {
+  .hidden { display: none; visibility: visible }
+
+  div.slide.hidden {
+    display: block;
+    visibility: visible
+  }
+  div.handout.hidden {
+    display: block;
+    visibility: visible
+  }
+  div.background {
+    display: none;
+    visibility: hidden;
+  }
+  body.single_slide div.initial_prompt {
+    display: block;
+    visibility: visible;
+  }
+  body.single_slide div.background { 
+    display: block;
+    visibility: visible;
+  }
+  body.single_slide div.background.hidden {
+    display: none;
+    visibility: hidden;
+  }
+  body.single_slide .invisible {
+    visibility: hidden;
+  }
+  body.single_slide .hidden {
+    display: none;
+    visibility: hidden;
+  }
+  body.single_slide div.slide {
+    position: absolute;
+  }
+  body.single_slide div.handout {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media print {
+  .hidden {
+    display: block;
+    visibility: visible;
+  }
+
+  div.slide pre {
+    font-size: 60%;
+    padding-left: 0.5em;
+  }
+  div.toolbar {
+    display: none;
+    visibility: hidden;
+  }
+  div.slidy_toc {
+    display: none;
+    visibility: hidden;
+  }
+  div.background {
+    display: none;
+    visibility: hidden;
+  }
+  div.slide {
+    page-break-before: always
+  }
+  /* :first-child isn't reliable for print media */
+  div.slide.first-slide {
+    page-break-before: avoid
+  }
+}
+
+/* Custom CSS */
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+}
+
+th, td {
+  height: 1em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+math.inline {
+  padding: auto;
+}
+
+
+.column1highlight th:nth-child(2), .column1highlight td:nth-child(2) {
+  background-color: lightgray;
+}
+
+.column2highlight th:nth-child(3), .column2highlight td:nth-child(3) {
+  background-color: lightgray;
+}
+
+.column3highlight th:nth-child(4), .column3highlight td:nth-child(4) {
+  background-color: lightgray;
+}
+
+.column4highlight th:nth-child(5), .column4highlight td:nth-child(5) {
+  background-color: lightgray;
+}
+
+.evidence tr:nth-child(3) td:nth-child(4) {
+  background-color: pink;
+}
